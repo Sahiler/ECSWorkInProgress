@@ -1,0 +1,45 @@
+###
+### A complete description of a Prefect Deployment for flow 'Extract islands'
+###
+name: island-schedule
+description: Data table of island countries
+version: 8bdf4b644ee61ed20f25527676526828
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: ecs
+tags:
+- batch
+- etl
+parameters: {}
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: Extract islands
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 0838f1b9-9cab-4d72-b623-4bc65405d398
+  _block_document_name: anonymous-071db325-2b40-4dc3-a30f-44814df689b6
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: /Users/sahilrangwala/src/prefect/prefect/Playground/Island-demo
+entrypoint: prefect-country-test-schedule.py:find_islands
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-04-21T21:05:30.260644+00:00'
